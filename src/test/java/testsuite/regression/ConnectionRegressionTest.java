@@ -157,7 +157,7 @@ import com.mysql.cj.jdbc.ha.ReplicationConnectionGroup;
 import com.mysql.cj.jdbc.ha.ReplicationConnectionGroupManager;
 import com.mysql.cj.jdbc.ha.ReplicationConnectionProxy;
 import com.mysql.cj.jdbc.ha.SequentialBalanceStrategy;
-import com.mysql.cj.jdbc.integration.jboss.MysqlValidConnectionChecker;
+//import com.mysql.cj.jdbc.integration.jboss.MysqlValidConnectionChecker;
 import com.mysql.cj.jdbc.jmx.ReplicationGroupManagerMBean;
 import com.mysql.cj.log.Log;
 import com.mysql.cj.log.ProfilerEvent;
@@ -1866,7 +1866,7 @@ public class ConnectionRegressionTest extends BaseTestCase {
     public void testBug29106() throws Exception {
         ClassLoader cl = Thread.currentThread().getContextClassLoader();
         Class<?> checkerClass = cl.loadClass("com.mysql.cj.jdbc.integration.jboss.MysqlValidConnectionChecker");
-        ((MysqlValidConnectionChecker) checkerClass.newInstance()).isValidConnection(this.conn);
+//        ((MysqlValidConnectionChecker) checkerClass.newInstance()).isValidConnection(this.conn);
     }
 
     public void testBug29852() throws Exception {
